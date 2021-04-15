@@ -26,7 +26,7 @@ def monitors_list():
             if serial_reg :
                 serial = serial_reg[0]
             year = re.findall(r'Year\sof\sManufacture\:\s(\d{4})',monitor)[0]
-            week = re.findall(r'Week\sof\sManufacture\:\s(\d{2})',monitor)[0]
+            week = re.findall(r'Week\sof\sManufacture\:\s(\d{1,2})',monitor)[0]
             monitors_info.append(dict(
                 vendor = vendor,
                 model = model,
